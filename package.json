@@ -1,0 +1,22 @@
+{
+  "name": "trading-trailing-offset-algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codler/trading-trailing-offset-algorithm.git"
+  },
+  "author": "Han Lin Yap (http://yap.nu)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codler/trading-trailing-offset-algorithm/issues"
+  },
+  "homepage": "https://github.com/codler/trading-trailing-offset-algorithm#readme",
+  "dependencies": {
+    "bitmex-data": "^1.0.0"
+  }
+}

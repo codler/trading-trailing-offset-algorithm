@@ -1,30 +1,6 @@
-declare var require: any;
+import { price } from 'bitmex-data';
 
-interface Data {
-  timestamp: string;
-  symbol: string;
-  open: number;
-  high: number;
-  low: number;
-  close: number;
-  trades: number;
-  volume: number;
-  vwap: number;
-  lastSize: number;
-  turnover: number;
-  homeNotional: number;
-  foreignNotional: number;
-}
-
-const formattedDayDate = date =>
-  `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-const startTime = new Date("2019").getTime();
-
-let data: Data[] = [];
-for (let days = 0; days < 210; days++) {
-  const date = new Date(startTime + days * 86400000);
-  data = data.concat(require(`./data/${formattedDayDate(date)}.json`));
-}
+let data = price(new Date('2019'), new Date('2019-06-30'));
 
 function run(stopLossTrigger: number, takeProfitTrigger: number) {
   let hasPosition = false;
